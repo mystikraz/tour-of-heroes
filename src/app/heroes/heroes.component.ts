@@ -13,7 +13,7 @@ import { of } from 'rxjs/observable/of';
 })
 export class HeroesComponent implements OnInit {
 
-  selectedHero: Hero;
+  // selectedHero: Hero;
 
 
   // heroes = HEROES;
@@ -30,8 +30,8 @@ export class HeroesComponent implements OnInit {
         .subscribe(heroes => this.heroes = heroes);
   }
 
-onSelect(hero: Hero): void {
-  this.selectedHero = hero;
-}
+// onSelect(hero: Hero): void {
+//   this.selectedHero = hero;
+// }
 
 }
