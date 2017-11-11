@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Hero } from '../hero';
+import { HEROES } from '../mock-heroes';
 
 @Component({
   selector: 'app-heroes',
@@ -7,10 +9,20 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class HeroesComponent implements OnInit {
-hero= 'Windstorm';
+
+  selectedHero: Hero;
+
+
+  heroes = HEROES;
+
   constructor() { }
 
   ngOnInit() {
+
   }
+
+onSelect(hero: Hero): void {
+  this.selectedHero = hero;
+}
 
 }
